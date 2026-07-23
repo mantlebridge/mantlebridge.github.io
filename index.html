@@ -1,311 +1,347 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mantle Bridge — Canonical cross-chain bridge</title>
-  <meta name="description" content="Mantle Bridge is Mantle Network’s canonical token bridge for transferring ETH, MNT, and supported tokens between Ethereum and Mantle.">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <meta name="theme-color" content="#eef0f3">
-  <link rel="canonical" href="https://mantlebridge.github.io/">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="prefetch" href="dashboard/index.html">
-  <link rel="preconnect" href="https://defillama.com/" crossorigin>
-  <link rel="preconnect" href="https://coins.llama.fi" crossorigin>
-  <meta property="og:type" content="website"><meta property="og:url" content="https://mantlebridge.github.io/">
-  <meta property="og:title" content="Mantle Bridge — Canonical cross-chain bridge">
-  <meta property="og:description" content="Mantle Bridge is Mantle Network’s canonical token bridge for transferring ETH, MNT, and supported tokens between Ethereum and Mantle.">
-  <meta property="og:site_name" content="Mantle Bridge dashboard"><meta property="og:image" content="https://mantlebridge.github.io/og-cover.png">
-  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Mantle Bridge — Canonical cross-chain bridge"><meta name="twitter:description" content="Mantle Bridge is Mantle Network’s canonical token bridge for transferring ETH, MNT, and supported tokens between Ethereum and Mantle."><meta name="twitter:image" content="https://mantlebridge.github.io/og-cover.png">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {"@type":"WebSite","@id":"https://mantlebridge.github.io/#website","url":"https://mantlebridge.github.io/","name":"Mantle Bridge dashboard","inLanguage":"en-US"},
-      {"@type":"Thing","@id":"https://mantlebridge.github.io/#brand","name":"Mantle Bridge",
-       "description":"Mantle Bridge is Mantle Network\u2019s canonical token bridge for transferring ETH, MNT, and supported tokens between Ethereum and Mantle.",
-       "sameAs":["https://www.mantle.xyz/", "https://app.mantle.xyz/bridge", "https://x.com/0xMantle", "https://github.com/mantlenetworkio"]},
-      {"@type":"WebApplication","@id":"https://mantlebridge.github.io/#widget","name":"Mantle Bridge preview","applicationCategory":"FinanceApplication","operatingSystem":"Any","url":"https://mantlebridge.github.io/#route-preview","isPartOf":{"@id":"https://mantlebridge.github.io/#webpage"},"featureList":["Preview the route","Reverse the direction","Open the app"]},
-      {"@type":"WebPage","@id":"https://mantlebridge.github.io/#webpage","url":"https://mantlebridge.github.io/","name":"Mantle Bridge \u2014 Canonical cross-chain bridge","description":"Mantle Bridge is Mantle Network\u2019s canonical token bridge for transferring ETH, MNT, and supported tokens between Ethereum and Mantle.","isPartOf":{"@id":"https://mantlebridge.github.io/#website"},"about":{"@id":"https://mantlebridge.github.io/#brand"},"mainEntity":{"@id":"https://mantlebridge.github.io/#brand"},"inLanguage":"en-US","mentions":[{"@type":"Thing","name":"Ethereum","sameAs":"https://ethereum.org/layer-2/learn/"},{"@type":"Thing","name":"Mantle Network","sameAs":"https://docs.mantle.xyz/network"}]},
-      {"@type":"ItemList","@id":"https://mantlebridge.github.io/#resources","name":"Mantle Bridge \u2014 resources & references","itemListElement":[{"@type":"ListItem","position":1,"name":"Mantle Network overview","url":"https://docs.mantle.xyz/network"},{"@type":"ListItem","position":2,"name":"Mantle on L2BEAT","url":"https://l2beat.com/scaling/projects/mantle"},{"@type":"ListItem","position":3,"name":"Ethereum layer 2","url":"https://ethereum.org/layer-2/learn/"},{"@type":"ListItem","position":4,"name":"Mantle source code","url":"https://github.com/mantlenetworkio/mantle"},{"@type":"ListItem","position":5,"name":"Mantle network","url":"https://www.mantle.xyz/network"},{"@type":"ListItem","position":6,"name":"Mantle on CoinGecko","url":"https://www.coingecko.com/en/coins/mantle"},{"@type":"ListItem","position":7,"name":"Mantle Bridge data","url":"https://defillama.com/protocol/mantle-bridge"},{"@type":"ListItem","position":8,"name":"Mantle chain TVL","url":"https://defillama.com/chain/Mantle"},{"@type":"ListItem","position":9,"name":"Mantle value secured","url":"https://l2beat.com/scaling/projects/mantle/tvs-breakdown"},{"@type":"ListItem","position":10,"name":"Mantle token data","url":"https://api.mantle.xyz/api/v1/token-data"},{"@type":"ListItem","position":11,"name":"Mantle Official Bridge","url":"https://app.mantle.xyz/bridge"},{"@type":"ListItem","position":12,"name":"Bridging on Mantle","url":"https://www.mantle.xyz/blog/announcements/bridging-on-mantle-mainnet"},{"@type":"ListItem","position":13,"name":"Mantle mainnet onboarding","url":"https://www.mantle.xyz/blog/developers/getting-onboarded-to-mantle-mainnet"},{"@type":"ListItem","position":14,"name":"Mantle quick access","url":"https://docs.mantle.xyz/network/for-developers/quick-access"},{"@type":"ListItem","position":15,"name":"Mantle block explorer guide","url":"https://www.mantle.xyz/blog/education/mantle-block-explorer"},{"@type":"ListItem","position":16,"name":"Mantle risk management","url":"https://docs.mantle.xyz/network/system-information/risk-management"},{"@type":"ListItem","position":17,"name":"Mantle audit index","url":"https://docs.mantle.xyz/network/more/audits"},{"@type":"ListItem","position":18,"name":"OpenZeppelin bridge audit","url":"https://www.openzeppelin.com/news/mantle-token-and-bridge-audit"},{"@type":"ListItem","position":19,"name":"OpenZeppelin Mantle V2 audit","url":"https://www.openzeppelin.com/news/mantle-v2-solidity-contracts-audit"},{"@type":"ListItem","position":20,"name":"Quantstamp bridge report","url":"https://certificate.quantstamp.com/full/mantle-network-bridge-contracts/b3babf24-0c57-449a-bc29-8133c665734a/index.html"}]}
-    ]
-  }
-  </script>
-  <style>
-:root{
-  --bg:#eef0f3; --bg-2:#e7eaef; --panel:#ffffff; --field:#f1f3f7; --field-2:#e9edf2;
-  --ink:#151a21; --text:#414954; --muted:#6a727d; --faint:#9aa2ad;
-  --line:rgba(20,26,33,.09); --line-2:rgba(20,26,33,.14);
-  --accent:#4B5563; --accent-ink:#262b33; --accent-soft:rgba(75,85,99,0.13); --accent-glow:rgba(75,85,99,0.3);
-  --cta:#171a20; --cta-hover:#0a0c10; --cta-ink:#ffffff;
-  --shadow-card:0 1px 0 rgba(20,26,33,.02), 0 40px 80px -42px rgba(24,32,48,.40), 0 14px 30px -22px rgba(24,32,48,.24);
-  --shadow-pop:0 24px 60px -26px rgba(24,32,48,.38), 0 8px 20px -12px rgba(24,32,48,.22);
-  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
-  --font: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --ease: cubic-bezier(0.22, 0.7, 0.24, 1);
-  color-scheme: light;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mantle Bridge — Dashboard</title>
+<meta name="description" content="Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://mantlebridge.github.io/">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="theme-color" content="#f6f7f9">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mantlebridge.github.io/">
+<meta property="og:title" content="Mantle Bridge — Dashboard">
+<meta property="og:description" content="Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.">
+<meta property="og:site_name" content="Mantle Bridge">
+<meta property="og:image" content="https://mantlebridge.github.io/og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mantle Bridge — Dashboard">
+<meta name="twitter:description" content="Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.">
+<meta name="twitter:image" content="https://mantlebridge.github.io/og-cover.png">
+<link rel="manifest" href="manifest.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://mantlebridge.github.io/#website", "url": "https://mantlebridge.github.io/", "name": "Mantle Bridge", "inLanguage": "en"}, {"@type": "SoftwareApplication", "@id": "https://mantlebridge.github.io/#brand", "name": "Mantle bridge", "alternateName": ["Mantle Bridge", "Mantle"], "description": "Cross-chain bridge routes for moving assets to and from Mantle, via native or third-party bridges.", "sameAs": ["https://docs.mantle.xyz/network", "https://ethereum.org/layer-2/learn/", "https://github.com/mantlenetworkio/mantle", "https://www.coingecko.com/en/coins/mantle", "https://docs.mantle.xyz/network/for-developers/quick-access"], "applicationCategory": "FinanceApplication", "operatingSystem": "Web"}, {"@type": "WebPage", "@id": "https://mantlebridge.github.io/#webpage", "url": "https://mantlebridge.github.io/", "name": "Mantle Bridge — Dashboard", "description": "Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.", "isPartOf": {"@id": "https://mantlebridge.github.io/#website"}, "about": {"@id": "https://mantlebridge.github.io/#brand"}, "mainEntity": {"@id": "https://mantlebridge.github.io/#brand"}, "inLanguage": "en", "dateModified": "2026-07-22"}, {"@type": "FAQPage", "@id": "https://mantlebridge.github.io/#faq", "mainEntity": [{"@type": "Question", "name": "Is this the official Mantle Bridge site?", "acceptedAnswer": {"@type": "Answer", "text": "No. This is an independent reference dashboard that explains how the bridge works; it does not operate the bridge or hold funds. Always navigate to the official Mantle interface yourself and verify the domain before connecting a wallet."}}, {"@type": "Question", "name": "How long does Mantle Bridge take?", "acceptedAnswer": {"@type": "Answer", "text": "The official FAQ describes deposits (Ethereum → Mantle) as typically about two minutes and withdrawals (Mantle → Ethereum) as up to twelve hours, since withdrawals must prove and finalize through the rollup before an Ethereum claim releases the funds."}}, {"@type": "Question", "name": "How do I bridge to Mantle Network?", "acceptedAnswer": {"@type": "Answer", "text": "Connect an EVM wallet on Ethereum mainnet, select a token from Mantle's supported list, sign the approval if prompted, then confirm the deposit transaction. The mapped token arrives on Mantle (chain ID 5000) once the cross-domain message is processed."}}, {"@type": "Question", "name": "Do I need MNT before bridging to Mantle?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for anything after arrival: MNT pays gas on Mantle, so bridged tokens in an empty wallet are stuck until MNT shows up. You also need ETH on mainnet later to claim any withdrawal back to Ethereum."}}, {"@type": "Question", "name": "Is Mantle Bridge safe to use?", "acceptedAnswer": {"@type": "Answer", "text": "It is Mantle's canonical bridge with open-source contracts and published audits, but that is not a guarantee — upgradeable contracts, proof-system faults, operator outages, and phishing all remain real risks. Check the independent risk assessment and verify contract addresses before signing."}}, {"@type": "Question", "name": "Should I use the canonical bridge or a third-party bridge?", "acceptedAnswer": {"@type": "Answer", "text": "The canonical route escrows and mints mapped tokens with no provider fee beyond gas, but withdrawals take hours; third-party liquidity bridges can be faster on exits while charging a fee and adding pool and routing risk. For listed tokens with no time pressure, the canonical route is the baseline; for context on bridge usage, public dashboards show how the routes compare."}}]}]}</script>
+<style>
+:root{--bg:#f6f7f9;--surface:#fff;--ink:#0b0d12;--text:#484f5c;--muted:#8b93a1;--line:rgba(11,13,18,.09);--line2:rgba(11,13,18,.14);--acc:#0e9f6e;--acc-ink:#0a7d57;--r:14px;--ease:cubic-bezier(.22,.7,.24,1);--font:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{color:var(--ink);letter-spacing:-.02em;margin:0}
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,247,249,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1160px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:26px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--ink);text-decoration:none;letter-spacing:-.02em;font-size:15.5px}
+.brand .dot{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,#0e9f6e,#0b1512);display:inline-block}
+.nav-mid{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:600;color:var(--text)}
+.nav-mid a{text-decoration:none}.nav-mid a:hover{color:var(--ink)}
+.hasmenu{position:relative;cursor:default}
+.hasmenu>span{display:inline-flex;align-items:center;gap:5px}
+.hasmenu>span:hover{color:var(--ink)}
+.menu{position:absolute;top:calc(100% + 14px);left:-16px;min-width:300px;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 60px -20px rgba(11,13,18,.22);padding:10px;opacity:0;visibility:hidden;transform:translateY(6px);transition:.2s var(--ease);display:grid}
+.hasmenu:hover .menu{opacity:1;visibility:visible;transform:none}
+.menu:before{content:"On this page";display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:8px 12px 6px}
+.menu a{padding:9px 12px;border-radius:9px;text-decoration:none;font-size:13.5px;font-weight:600;color:var(--text)}
+.menu a:hover{background:var(--bg);color:var(--acc-ink)}
+.nav-r{margin-left:auto;display:flex;align-items:center;gap:18px}
+.sigs{display:flex;gap:16px}
+.sig{display:flex;flex-direction:column;line-height:1.1;text-decoration:none;font-variant-numeric:tabular-nums}
+.sig span{font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.sig b{font-size:13px;font-weight:700;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;border-radius:11px;transition:.18s var(--ease)}
+.btn-nav{padding:9px 16px;background:var(--ink);color:#fff;font-size:13.5px}
+.btn-nav:hover{transform:translateY(-1px)}
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch;border-bottom:1px solid var(--line);min-height:calc(100svh - 66px);position:relative}
+.hero-l{padding:clamp(40px,7vh,86px) clamp(24px,4vw,64px) clamp(40px,7vh,86px) max(24px,calc((100vw - 1160px)/2 + 24px));display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-ink);margin:0 0 18px}
+.hero-l h1{font-size:clamp(2.7rem,6vw,4.4rem);line-height:1.01;font-weight:850;margin:0}
+.lead{margin:22px 0 0;max-width:46ch;font-size:16.5px;color:var(--text)}
+.lead b,.lead strong{color:var(--ink);font-weight:700}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 0}
+.btn-primary{padding:15px 26px;background:var(--ink);color:#fff;font-size:15px;box-shadow:0 14px 30px -12px rgba(11,13,18,.5)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-primary .go{transition:transform .18s var(--ease)}.btn-primary:hover .go{transform:translate(2px,-2px)}
+.btn-ghost{padding:15px 22px;background:transparent;color:var(--ink);border:1px solid var(--line2)}
+.btn-ghost:hover{background:#fff;border-color:var(--ink)}
+.trust{margin:24px 0 0;font-size:12.5px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.trust a{color:var(--acc-ink);text-decoration:none;font-weight:600}
+.trust .d{width:3px;height:3px;border-radius:50%;background:var(--muted);display:inline-block}
+.hero-r{position:relative;background:radial-gradient(120% 100% at 80% 10%,#134e37,#0a1310 60%);display:flex;align-items:center;justify-content:center;padding:clamp(28px,5vh,60px) clamp(20px,3vw,48px) clamp(28px,5vh,60px) clamp(20px,3vw,48px);overflow:hidden}
+.hero-r:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:26px 26px;mask:radial-gradient(70% 70% at 70% 30%,#000,transparent)}
+.widget{position:relative;width:100%;max-width:392px;background:var(--surface);border-radius:22px;box-shadow:0 40px 90px -30px rgba(0,0,0,.6);padding:18px}
+.w-head{display:flex;align-items:center;justify-content:space-between;margin:2px 4px 14px}
+.w-head b{color:var(--ink);font-size:16px;font-weight:800;letter-spacing:-.02em}
+.w-tag{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:20px;padding:3px 9px}
+.leg{background:var(--bg);border:1px solid var(--line);border-radius:15px;padding:14px 15px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.leg .amt{font-size:26px;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+.leg .sub{font-size:12px;color:var(--muted);margin-top:1px}
+.tok{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line2);border-radius:22px;padding:6px 11px 6px 7px;font-weight:800;color:var(--ink);font-size:14px}
+.tok img{width:22px;height:22px;border-radius:50%}
+.tok .net{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.swapbtn{display:flex;justify-content:center;margin:-9px 0;position:relative;z-index:2}
+.swapbtn i{width:36px;height:36px;border-radius:11px;background:var(--ink);color:#fff;display:grid;place-items:center;border:3px solid var(--surface)}
+.w-route{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);padding:13px 6px 4px}
+.w-route b{color:var(--ink);font-weight:700}
+.w-cta{display:block;text-align:center;margin:12px 0 2px;padding:15px;border-radius:14px;background:var(--acc);color:#fff;font-weight:800;font-size:15px;text-decoration:none;transition:.18s var(--ease);border:0;cursor:pointer;font-family:inherit}
+.w-cta:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.w-note{text-align:center;font-size:11px;color:var(--muted);margin:9px 0 2px}
+/* numbers */
+.numbers{padding:clamp(44px,7vh,80px) 0;border-bottom:1px solid var(--line)}
+.sec-eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-ink);margin:0 0 8px}
+.sec-h{font-size:clamp(1.5rem,3.2vw,2rem);font-weight:800;margin:0 0 6px}
+.sec-sub{color:var(--text);margin:0 0 30px;max-width:60ch}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.stat-n{font-size:clamp(1.7rem,3vw,2.3rem);font-weight:850;color:var(--ink);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat-l{margin:4px 0 14px;font-size:13.5px;color:var(--text);font-weight:600}
+.stat-v{font-size:12px;font-weight:700;color:var(--acc-ink);text-decoration:none}
+.stat-v:hover{text-decoration:underline}
+/* content */
+.content{padding:clamp(44px,7vh,80px) 0}
+.content .lede{max-width:64ch;margin:0 0 34px}
+.blocks{display:grid;gap:16px}
+.block{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,3vw,34px);box-shadow:0 1px 3px rgba(11,13,18,.04)}
+.block h2{font-size:clamp(1.25rem,2.6vw,1.6rem);font-weight:800;margin:0 0 12px}
+.prose{color:var(--text);font-size:15px;line-height:1.72}
+.prose p{margin:0 0 12px}.prose p:last-child{margin-bottom:0}
+.prose ul{margin:10px 0;padding-left:20px}.prose li{margin-bottom:7px}
+.prose strong{color:var(--ink);font-weight:700}
+.prose a{color:var(--acc-ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;font-weight:600}
+.prose code{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.9em;font-family:ui-monospace,Menlo,Consolas,monospace}
+/* faq */
+.faq{padding:0 0 clamp(44px,7vh,80px)}
+.faq-list{display:grid;gap:12px;margin:26px 0 0}
+.qa{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;display:flex;gap:18px}
+.qn{font-size:13px;font-weight:800;color:var(--acc-ink);font-variant-numeric:tabular-nums;padding-top:2px}
+.qa h3{font-size:16px;font-weight:800;margin:0 0 6px}
+/* disclosure */
+.disc{margin:0 0 clamp(40px,6vh,70px);padding:22px 24px;border:1px solid var(--line2);border-left:3px solid var(--acc);border-radius:14px;background:var(--surface)}
+.disc h2{font-size:1.15rem;font-weight:800;margin:0 0 10px}
+.disc .prose strong{color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:26px 0;font-size:12.5px;color:var(--muted)}
+footer a{color:var(--acc-ink);text-decoration:none}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+/* scroll cue */
+.scrollcue{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;z-index:4;transition:color .18s var(--ease)}
+.scrollcue:hover{color:var(--ink)}
+.scrollcue svg{animation:bob 1.9s var(--ease) infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+/* modal */
+.mroot{position:fixed;inset:0;z-index:200;display:grid;place-items:center;padding:20px}
+.mroot[hidden]{display:none}
+.mbg{position:absolute;inset:0;background:rgba(11,13,18,.44);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;transition:opacity .22s var(--ease)}
+.mcard{position:relative;width:100%;max-width:392px;background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:0 50px 110px -30px rgba(0,0,0,.55);padding:22px;opacity:0;transform:translateY(10px) scale(.985);transition:opacity .24s var(--ease),transform .24s var(--ease)}
+.mroot.in .mbg{opacity:1}
+.mroot.in .mcard{opacity:1;transform:none}
+.mtop{display:flex;align-items:center;justify-content:space-between;margin:0 0 18px}
+.mbrand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--ink);font-size:14.5px;letter-spacing:-.02em}
+.mbrand .dot{width:20px;height:20px;border-radius:6px;background:linear-gradient(135deg,#0e9f6e,#0b1512);display:inline-block}
+.mx{width:30px;height:30px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--muted);display:grid;place-items:center;cursor:pointer;transition:.16s var(--ease)}
+.mx:hover{color:var(--ink);border-color:var(--line2)}
+.mroute{display:flex;align-items:center;justify-content:center;gap:16px;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:18px 16px;margin:0 0 16px}
+.mchip{display:flex;flex-direction:column;align-items:center;gap:6px}
+.mchip img{width:34px;height:34px;border-radius:50%}
+.mchip b{font-size:14px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.mchip span{font-size:11px;color:var(--muted);font-weight:600}
+.marrow{color:var(--muted);display:grid;place-items:center}
+.mbar{height:4px;border-radius:3px;background:var(--line);overflow:hidden;margin:0 0 12px}
+.mbar i{display:block;height:100%;width:0;background:var(--acc);border-radius:3px;transition:width 1.15s var(--ease)}
+.mscan{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;color:var(--text);padding:0 2px 16px}
+.mspin{width:16px;height:16px;border-radius:50%;border:2px solid var(--line2);border-top-color:var(--acc-ink);animation:spin .7s linear infinite;flex:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.mcheck{width:16px;height:16px;color:var(--acc-ink);flex:none}
+.mscan.done{color:var(--ink)}
+.mcta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;text-align:center;padding:15px;border-radius:14px;background:var(--ink);color:#fff;font-weight:800;font-size:15px;text-decoration:none;transition:.18s var(--ease)}
+.mcta:hover{transform:translateY(-1px);box-shadow:0 16px 32px -14px rgba(11,13,18,.6)}
+.mnote{text-align:center;font-size:11px;color:var(--muted);margin:12px 2px 0;line-height:1.5}
+.mnote a{color:var(--acc-ink);text-decoration:none;font-weight:600}
+@media (prefers-reduced-motion:reduce){.scrollcue svg,.mspin{animation:none}.mbar i{transition:none}}
+@media (max-width:900px){
+ .hero{grid-template-columns:1fr;min-height:0}
+ .hero-l{padding:44px 24px 36px}
+ .hero-r{padding:0 24px 40px}
+ .nav-mid,.sigs{display:none}
+ .stat-grid{grid-template-columns:1fr 1fr}
+ .scrollcue{display:none}
 }
-html[data-theme="dark"]{
-  --bg:#0b0e13; --bg-2:#0e131b; --panel:#141a24; --field:#1b2230; --field-2:#232c3d;
-  --ink:#e9eef7; --text:#bcc5d6; --muted:#8b95a8; --faint:#606a7e;
-  --line:rgba(226,234,250,.10); --line-2:rgba(226,234,250,.18);
-  --accent:#7d848e; --accent-ink:#a5aab1; --accent-soft:rgba(125,132,142,0.16); --accent-glow:rgba(125,132,142,0.34);
-  --cta:#7d848e; --cta-hover:#6b717a; --cta-ink:#ffffff;
-  --shadow-card:0 30px 70px -34px rgba(0,0,0,.66), 0 6px 18px -10px rgba(0,0,0,.5);
-  --shadow-pop:0 24px 60px -26px rgba(0,0,0,.7);
-  color-scheme: dark;
-}
-*{ box-sizing:border-box; }
-html{ height:100%; scroll-behavior:smooth; }
-@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
-body{ margin:0; min-width:320px; height:100%; overflow:hidden; color:var(--text); background:var(--bg); font-family:var(--font); font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
-a{ color:inherit; text-decoration:none; }
-button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
-img{ display:block; max-width:100%; }
-h1,h2,h3,p{ margin:0; }
-a:focus-visible, button:focus-visible, summary:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:10px; }
-.skip{ position:absolute; left:-999px; }
-.skip:focus{ left:12px; top:12px; z-index:120; padding:9px 15px; border-radius:10px; background:var(--cta); color:var(--cta-ink); font-weight:750; }
-.bg{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; background:
-  radial-gradient(1100px 700px at 82% 116%, var(--bg-2), transparent 60%),
-  radial-gradient(900px 620px at -6% -8%, var(--bg-2), transparent 58%); }
-.bg::before{ content:""; position:absolute; right:-14%; bottom:-30%; width:min(92vw,940px); aspect-ratio:1; border-radius:50%;
-  background:repeating-radial-gradient(circle at center, transparent 0 86px, var(--line) 86px 87px); opacity:.5; mask:radial-gradient(circle at center, #000 62%, transparent 72%); }
-.bg::after{ content:""; position:absolute; left:-10%; top:-16%; width:min(70vw,560px); aspect-ratio:1; border-radius:50%;
-  background:repeating-radial-gradient(circle at center, transparent 0 64px, var(--line) 64px 65px); opacity:.4; mask:radial-gradient(circle at center, #000 60%, transparent 72%); }
-.topbar{ position:relative; z-index:70; flex:0 0 auto; display:flex; align-items:center; justify-content:space-between; gap:14px; padding:13px clamp(16px,3.4vw,34px);
-  background:color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter:saturate(140%) blur(12px); -webkit-backdrop-filter:saturate(140%) blur(12px); border-bottom:1px solid var(--line); }
-.tb-left{ display:flex; align-items:center; gap:12px; min-width:0; }
-.hamb{ display:grid; place-items:center; width:40px; height:40px; flex:0 0 auto; position:relative; border:1px solid var(--line-2); border-radius:12px; background:var(--panel); color:var(--ink); transition:border-color .15s var(--ease); }
-.hamb:hover{ border-color:var(--accent); }
-.hamb .bar{ position:absolute; left:11px; right:11px; height:2px; border-radius:2px; background:currentColor; transition:transform .24s var(--ease), opacity .18s var(--ease); }
-.hamb .bar:nth-child(1){ top:14px; } .hamb .bar:nth-child(2){ top:19px; } .hamb .bar:nth-child(3){ top:24px; }
-body.drawer-open .hamb .bar:nth-child(1){ transform:translateY(5px) rotate(45deg); }
-body.drawer-open .hamb .bar:nth-child(2){ opacity:0; }
-body.drawer-open .hamb .bar:nth-child(3){ transform:translateY(-5px) rotate(-45deg); }
-.brand{ display:flex; align-items:center; gap:11px; min-width:0; }
-.brand-logo{ width:34px; height:34px; flex:0 0 auto; display:grid; place-items:center; border-radius:10px; background:var(--panel); box-shadow:inset 0 0 0 1px var(--line-2); }
-.brand-logo img{ width:22px; height:22px; border-radius:50%; }
-.brand-name{ font-size:19px; font-weight:820; letter-spacing:-0.03em; color:var(--ink); line-height:1.1; white-space:nowrap; }
-.tb-right{ display:flex; align-items:center; gap:9px; }
-.theme-toggle{ display:inline-flex; align-items:center; gap:2px; padding:3px; border-radius:999px; background:var(--field); box-shadow:inset 0 0 0 1px var(--line); }
-.theme-toggle button{ display:grid; place-items:center; width:30px; height:30px; border-radius:999px; color:var(--muted); transition:color .15s var(--ease), background-color .15s var(--ease); }
-.theme-toggle button svg{ width:15px; height:15px; }
-.theme-toggle button[aria-pressed="true"]{ color:var(--ink); background:var(--panel); box-shadow:0 2px 8px -3px rgba(0,0,0,.28); }
-.btn-app{ display:inline-flex; align-items:center; gap:8px; padding:9px 15px; border-radius:11px; background:var(--panel); color:var(--ink); font-size:13.5px; font-weight:700; letter-spacing:-0.01em; box-shadow:inset 0 0 0 1px var(--line-2); transition:box-shadow .15s var(--ease), transform .15s var(--ease); white-space:nowrap; }
-.btn-app svg{ width:16px; height:16px; color:var(--muted); }
-.btn-app:hover{ box-shadow:inset 0 0 0 1px var(--accent); transform:translateY(-1px); }
-.btn-app:hover svg{ color:var(--accent-ink); }
-.scrim{ position:fixed; inset:0; z-index:80; background:rgba(10,14,17,.42); opacity:0; visibility:hidden; transition:opacity .28s var(--ease), visibility .28s var(--ease); }
-body.drawer-open .scrim{ opacity:1; visibility:visible; }
-.drawer{ position:fixed; z-index:90; top:0; left:0; height:100dvh; width:300px; max-width:86vw; display:flex; flex-direction:column; padding:16px 14px 16px; background:var(--panel); border-right:1px solid var(--line); box-shadow:var(--shadow-pop);
-  transform:translateX(-104%); transition:transform .3s var(--ease); overflow-y:auto; }
-body.drawer-open .drawer{ transform:translateX(0); }
-.drawer-head{ display:flex; align-items:center; justify-content:space-between; gap:10px; padding:2px 6px 8px; }
-.drawer-head .brand-name{ font-size:15px; }
-.drawer-close{ display:grid; place-items:center; width:34px; height:34px; border-radius:10px; color:var(--muted); }
-.drawer-close:hover{ color:var(--ink); background:var(--field); }
-.drawer-close svg{ width:17px; height:17px; }
-.nav-label{ margin:15px 12px 6px; font-size:10px; font-weight:750; letter-spacing:0.15em; text-transform:uppercase; color:var(--faint); }
-.nav-item{ display:flex; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; color:var(--text); font-size:14px; font-weight:650; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.nav-item .ni-ico{ width:18px; height:18px; flex:0 0 auto; color:var(--muted); }
-.nav-item.is-active{ color:var(--accent-ink); background:var(--accent-soft); }
-.nav-item.is-active .ni-ico{ color:var(--accent-ink); }
-.nav-item:hover{ color:var(--ink); background:var(--field); }
-.nav-group{ border-radius:10px; }
-.nav-group summary{ display:flex; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; color:var(--text); font-size:14px; font-weight:650; cursor:pointer; list-style:none; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.nav-group summary::-webkit-details-marker{ display:none; }
-.nav-group summary .ni-ico{ width:18px; height:18px; flex:0 0 auto; color:var(--muted); }
-.nav-group summary .chev{ width:15px; height:15px; margin-left:auto; color:var(--faint); transition:transform .2s var(--ease); }
-.nav-group summary:hover{ color:var(--ink); background:var(--field); }
-.nav-group[open] summary{ color:var(--ink); }
-.nav-group[open] summary .chev{ transform:rotate(180deg); }
-.nav-sub{ display:flex; flex-direction:column; gap:1px; padding:2px 0 8px 42px; }
-.nav-sub a{ display:flex; align-items:baseline; gap:7px; padding:6px 10px; border-radius:8px; color:var(--muted); font-size:12.5px; font-weight:550; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.nav-sub a small{ color:var(--faint); font-size:10.5px; font-weight:500; }
-.nav-sub a:hover{ color:var(--accent-ink); background:var(--field); }
-.drawer-foot{ margin-top:auto; padding-top:13px; border-top:1px solid var(--line); }
-.disclose{ margin:8px 8px 0; font-size:11px; line-height:1.5; color:var(--muted); }
-.disclose strong{ color:var(--text); font-weight:750; }
-.fine{ margin:6px 8px 0; font-size:10.5px; line-height:1.45; color:var(--faint); }
-.app{ height:100dvh; display:flex; flex-direction:column; overflow:hidden; position:relative; z-index:1; }
-.wrap{ flex:1 1 auto; min-height:0; display:grid; place-items:center; overflow:hidden; }
-.stage{ width:100%; max-width:560px; max-height:100%; margin-inline:auto; padding:clamp(14px,3vh,36px) clamp(16px,3.4vw,26px); display:flex; flex-direction:column; align-items:center; text-align:center; }
-.lead{ margin:0 0 clamp(13px,2.2vh,20px); max-width:24ch; font-size:clamp(19px,2.5vw,27px); line-height:1.16; letter-spacing:-0.025em; font-weight:750; color:var(--ink); }
-.lead .hl{ color:var(--accent-ink); }
-.hero-chips{ display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-top:clamp(13px,2.2vh,18px); }
-.hchip{ display:inline-flex; align-items:baseline; gap:7px; padding:8px 13px; border-radius:12px; background:var(--panel); box-shadow:inset 0 0 0 1px var(--line); font-size:12px; font-weight:600; color:var(--muted); transition:box-shadow .15s var(--ease), color .15s var(--ease); }
-.hchip b{ color:var(--ink); font-family:var(--mono); font-size:12.5px; font-weight:650; font-variant-numeric:tabular-nums; }
-.hchip .ext{ color:var(--faint); font-size:10px; }
-a.hchip:hover{ box-shadow:inset 0 0 0 1px var(--accent); color:var(--text); }
-a.hchip:hover .ext{ color:var(--accent-ink); }
-.swap-card{ position:relative; width:min(480px,100%); border-radius:28px; background:var(--panel); padding:clamp(20px,4vw,30px); text-align:left; box-shadow:var(--shadow-card); }
-.card-head{ display:flex; align-items:center; justify-content:space-between; margin:2px 4px 17px; }
-.card-title{ font-size:15px; font-weight:800; letter-spacing:-0.02em; color:var(--ink); }
-.badge{ display:inline-flex; align-items:center; gap:6px; padding:5px 11px; border-radius:999px; color:var(--accent-ink); background:var(--accent-soft); font-size:10px; font-weight:750; letter-spacing:0.07em; text-transform:uppercase; }
-.badge i{ width:6px; height:6px; border-radius:50%; background:var(--accent); }
-.field{ position:relative; padding:17px 18px 18px; border-radius:19px; background:var(--field); }
-.field + .field{ margin-top:6px; }
-.field-top{ display:flex; align-items:center; justify-content:space-between; }
-.field-label{ font-size:12px; font-weight:600; color:var(--muted); }
-.field-bal{ font-size:11px; font-weight:600; color:var(--faint); }
-.field-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:11px; min-width:0; }
-.amount{ min-width:0; }
-.amount b{ display:block; font-size:clamp(29px,5vw,38px); font-weight:750; line-height:1; letter-spacing:-0.02em; color:var(--ink); font-variant-numeric:tabular-nums; }
-.amount span{ display:block; margin-top:6px; font-size:11px; font-weight:600; color:var(--faint); }
-.token-pill{ display:inline-flex; align-items:center; gap:10px; flex:0 0 auto; padding:7px 12px 7px 8px; border-radius:999px; background:var(--panel); box-shadow:0 4px 14px -8px rgba(0,0,0,.4), inset 0 0 0 1px var(--line); transition:box-shadow .15s var(--ease); }
-.token-pill:hover{ box-shadow:0 6px 18px -8px rgba(0,0,0,.42), inset 0 0 0 1px var(--line-2); }
-.token-pill img{ width:26px; height:26px; flex:0 0 auto; border-radius:50%; }
-.token-meta{ display:flex; flex-direction:column; line-height:1.05; min-width:0; }
-.token-meta small{ font-size:9.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); }
-.token-meta b{ font-size:15px; font-weight:800; letter-spacing:-0.01em; color:var(--ink); white-space:nowrap; }
-.token-pill .chev{ width:14px; height:14px; flex:0 0 auto; color:var(--faint); }
-.reverse{ position:relative; z-index:2; display:grid; place-items:center; width:40px; height:40px; margin:-14px auto; border:4px solid var(--panel); border-radius:13px; background:var(--field-2); color:var(--muted); box-shadow:0 6px 16px -8px rgba(0,0,0,.4); transition:transform .28s var(--ease), color .15s var(--ease), background-color .15s var(--ease); }
-.reverse svg{ width:16px; height:16px; }
-.reverse:hover{ color:var(--cta-ink); background:var(--accent); transform:rotate(180deg); }
-.details-btn{ display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:12px; padding:12px; border-radius:14px; background:var(--field); color:var(--muted); font-size:12px; font-weight:750; letter-spacing:0.06em; text-transform:uppercase; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.details-btn svg{ width:14px; height:14px; transition:transform .2s var(--ease); }
-.details-btn:hover{ color:var(--ink); }
-.details-btn[aria-expanded="true"] svg{ transform:rotate(180deg); }
-.details{ overflow:hidden; max-height:0; opacity:0; transition:max-height .3s var(--ease), opacity .22s var(--ease), margin .3s var(--ease); }
-.details.open{ max-height:280px; opacity:1; margin-top:6px; }
-.d-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 8px; border-bottom:1px solid var(--line); }
-.d-row:last-child{ border-bottom:0; }
-.d-row span{ font-size:12.5px; font-weight:600; color:var(--muted); }
-.d-row b{ font-size:12.5px; font-weight:700; color:var(--text); }
-.d-row b.ok{ color:var(--accent-ink); }
-.d-row b.mono{ font-family:var(--mono); font-size:11px; }
-.cta{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; padding:16px; border-radius:16px; background:var(--cta); color:var(--cta-ink); font-size:15px; font-weight:800; letter-spacing:0.03em; text-transform:uppercase; box-shadow:0 16px 34px -16px rgba(0,0,0,.5); transition:background-color .15s var(--ease), transform .15s var(--ease); }
-.cta svg{ width:16px; height:16px; }
-.cta:hover{ background:var(--cta-hover); transform:translateY(-1px); }
-.card-note{ margin:13px 4px 0; font-size:11px; line-height:1.5; color:var(--faint); text-align:center; }
-.card-note a{ color:var(--muted); text-decoration:underline; text-decoration-color:var(--line-2); text-underline-offset:2px; }
-.card-note a:hover{ color:var(--accent-ink); }
-@media (max-width:560px){
-  .brand-name{ font-size:16px; } .btn-app span{ display:none; } .btn-app{ padding:9px 11px; }
-  .stage{ padding:12px 16px; }
-  .lead{ font-size:clamp(18px,5.5vw,24px); margin-bottom:14px; }
-  .swap-card{ padding:18px; } .field{ padding:14px 15px 15px; } .amount b{ font-size:29px; }
-  .hero-chips{ margin-top:12px; }
-}
-@media (max-height:700px){ .lead{ font-size:clamp(17px,4.5vw,21px); margin-bottom:10px; } .hero-chips{ display:none; } }
-@media (max-height:600px){ .field{ padding:12px 15px 13px; } .amount b{ font-size:26px; } .details-btn{ margin-top:8px; padding:9px; } .cta{ padding:14px; margin-top:8px; } }
-@media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
-  </style>
-  <script>document.documentElement.classList.add('js')</script>
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
 </head>
 <body>
-  <a class="skip" href="#route-preview">Skip to preview</a>
-  <div class="bg" aria-hidden="true"></div>
+<header class="nav"><div class="nav-in">
+  <a class="brand" href="./"><span class="dot"></span>Mantle Bridge</a>
+  <nav class="nav-mid">
+    <div class="hasmenu"><span>Bridge guide <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></span>
+      <div class="menu"><a href="#what">What is this bridge?</a><a href="#how">How bridging works</a><a href="#deposit">Depositing to the destination</a><a href="#withdraw">Withdrawing back</a><a href="#fees">Time and fees</a><a href="#safety">Is it safe?</a><a href="#troubleshoot">Problems and fixes</a></div></div>
+    <a href="#how">How it works</a><a href="#fees">Fees</a><a href="#safety">Safety</a><a href="#faq">FAQ</a>
+  </nav>
+  <div class="nav-r"><div class="sigs"><a class="sig tick" href="https://coinmarketcap.com/currencies/mantle/" target="_blank" rel="noopener noreferrer"><span>MNT</span><b id="sig-mnt">…</b></a><a class="sig tick" href="https://www.coingecko.com/en/coins/ethereum" target="_blank" rel="noopener noreferrer"><span>ETH</span><b id="sig-eth">…</b></a></div>
+    <a class="btn btn-nav" href="dashboard/" target="_blank" rel="noopener noreferrer">Open app <span aria-hidden="true">↗</span></a></div>
+</div></header>
 
-  <div class="app">
-  <header class="topbar">
-    <div class="tb-left">
-      <button class="hamb" type="button" id="hamb" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <div class="brand"><span class="brand-logo"><img src="favicon.png" width="22" height="22" alt="Mantle Bridge logo"></span><h1 class="brand-name">Mantle Bridge</h1></div>
+<main>
+<section class="hero">
+  <div class="hero-l">
+    <h1>Mantle Bridge</h1>
+    <p class="lead"><strong>Mantle Bridge</strong> moves supported tokens between Ethereum and Mantle Network through canonical contracts — deposits, withdrawals, approvals, and finalization covered here.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="dashboard/" data-open-modal target="_blank" rel="noopener noreferrer">Open the Mantle bridge <span class="go" aria-hidden="true">↗</span></a>
+      <a class="btn btn-ghost" href="#how">How it works</a>
     </div>
-    <div class="tb-right">
-      <div class="theme-toggle" role="group" aria-label="Color theme">
-        <button type="button" id="theme-light" aria-pressed="true" aria-label="Light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg></button>
-        <button type="button" id="theme-dark" aria-pressed="false" aria-label="Dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a6.5 6.5 0 1 0 10.5 10.5z"/></svg></button>
-      </div>
-      <a class="btn-app" href="dashboard/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M16 11h2"/></svg><span>Open app</span></a>
-    </div>
-  </header>
-
-  <div class="scrim" id="scrim" tabindex="-1"></div>
-  <aside class="drawer" id="drawer" aria-label="Primary" aria-hidden="true">
-    <div class="drawer-head">
-      <div class="brand"><span class="brand-logo"><img src="favicon.png" width="22" height="22" alt=""></span><span class="brand-name">Mantle Bridge</span></div>
-      <button class="drawer-close" type="button" id="drawer-close" aria-label="Close navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-    </div>
-    <nav aria-label="Sections">
-      <p class="nav-label">Bridge</p>
-      <a class="nav-item is-active" href="#route-preview" aria-current="page"><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 10h11l-3-3M17 14H6l3 3"/></svg>Route preview</a>
-      <p class="nav-label">Understand</p>
-      <details class="nav-group" open><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>What Mantle Bridge is<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://docs.mantle.xyz/network" target="_blank" rel="noopener noreferrer">Mantle Network overview <small>Official network overview</small></a><a href="https://l2beat.com/scaling/projects/mantle" target="_blank" rel="noopener noreferrer">Mantle on L2BEAT <small>Independent rollup profile</small></a><a href="https://ethereum.org/layer-2/learn/" target="_blank" rel="noopener noreferrer">Ethereum layer 2 <small>Ethereum L2 fundamentals</small></a><a href="https://github.com/mantlenetworkio/mantle" target="_blank" rel="noopener noreferrer">Mantle source code <small>Core protocol source</small></a><a href="https://www.mantle.xyz/network" target="_blank" rel="noopener noreferrer">Mantle network <small>Official network architecture</small></a></div></details>
-      <p class="nav-label">Markets &amp; data</p>
-      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Live Mantle metrics<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://www.coingecko.com/en/coins/mantle" target="_blank" rel="noopener noreferrer">Mantle on CoinGecko <small>Verified MNT market data</small></a><a href="https://defillama.com/protocol/mantle-bridge" target="_blank" rel="noopener noreferrer">Mantle Bridge data <small>Bridge TVL raw data</small></a><a href="https://defillama.com/chain/Mantle" target="_blank" rel="noopener noreferrer">Mantle chain TVL <small>Mantle TVL history</small></a><a href="https://l2beat.com/scaling/projects/mantle/tvs-breakdown" target="_blank" rel="noopener noreferrer">Mantle value secured <small>Canonical value breakdown</small></a><a href="https://api.mantle.xyz/api/v1/token-data" target="_blank" rel="noopener noreferrer">Mantle token data <small>Official token supply feed</small></a></div></details>
-      <p class="nav-label">Guides</p>
-      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Bridge and verify<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://app.mantle.xyz/bridge" target="_blank" rel="noopener noreferrer">Mantle Official Bridge <small>Launch official bridge</small></a><a href="https://www.mantle.xyz/blog/announcements/bridging-on-mantle-mainnet" target="_blank" rel="noopener noreferrer">Bridging on Mantle <small>Official bridging walkthrough</small></a><a href="https://www.mantle.xyz/blog/developers/getting-onboarded-to-mantle-mainnet" target="_blank" rel="noopener noreferrer">Mantle mainnet onboarding <small>Wallet and network setup</small></a><a href="https://docs.mantle.xyz/network/for-developers/quick-access" target="_blank" rel="noopener noreferrer">Mantle quick access <small>RPC contracts token list</small></a><a href="https://www.mantle.xyz/blog/education/mantle-block-explorer" target="_blank" rel="noopener noreferrer">Mantle block explorer guide <small>Read cross-chain activity</small></a></div></details>
-      <p class="nav-label">Safety</p>
-      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Audits and risks<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://docs.mantle.xyz/network/system-information/risk-management" target="_blank" rel="noopener noreferrer">Mantle risk management <small>Official risk controls</small></a><a href="https://docs.mantle.xyz/network/more/audits" target="_blank" rel="noopener noreferrer">Mantle audit index <small>Official audit directory</small></a><a href="https://www.openzeppelin.com/news/mantle-token-and-bridge-audit" target="_blank" rel="noopener noreferrer">OpenZeppelin bridge audit <small>Token bridge assessment</small></a><a href="https://www.openzeppelin.com/news/mantle-v2-solidity-contracts-audit" target="_blank" rel="noopener noreferrer">OpenZeppelin Mantle V2 audit <small>V2 bridge contract review</small></a><a href="https://certificate.quantstamp.com/full/mantle-network-bridge-contracts/b3babf24-0c57-449a-bc29-8133c665734a/index.html" target="_blank" rel="noopener noreferrer">Quantstamp bridge report <small>Independent bridge audit</small></a></div></details>
-    </nav>
-    <div class="drawer-foot">
-      <p class="disclose"><strong>Independent dashboard.</strong> Not affiliated with any protocol or issuer named here.</p>
-      <p class="fine">Live figures come from public third-party sources and change. Educational reference only.</p>
-    </div>
-  </aside>
-
-  <div class="wrap">
-    <main class="stage">
-      <h2 class="lead">Canonical cross-chain <span class="hl">bridge</span></h2>
-      <div class="swap-card" id="route-preview" aria-label="Mantle Bridge preview">
-          <div class="card-head"><span class="card-title">Ethereum to Mantle route</span><span class="badge"><i aria-hidden="true"></i> Preview</span></div>
-          <div class="field">
-            <div class="field-top"><span class="field-label">You send</span><span class="field-bal">Illustrative</span></div>
-            <div class="field-row"><div class="amount"><b>1.00</b><span id="sub-from">on ETH</span></div>
-              <span class="token-pill" id="pill-from"><img src="eth.png" alt="ETH logo" width="26" height="26"><span class="token-meta"><small>From</small><b>ETH</b></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></div>
-          </div>
-          <button class="reverse" type="button" id="reverse" aria-label="Reverse direction" title="Reverse direction"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 4v13M8 4L4 8M8 4l4 4M16 20V7M16 20l-4-4M16 20l4-4"/></svg></button>
-          <div class="field">
-            <div class="field-top"><span class="field-label">You receive</span><span class="field-bal">minus gas</span></div>
-            <div class="field-row"><div class="amount"><b>≈ 1.00</b><span id="sub-to">on MNT</span></div>
-              <span class="token-pill" id="pill-to"><img src="mnt.png" alt="MNT logo" width="26" height="26"><span class="token-meta"><small>To</small><b>MNT</b></span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span></div>
-          </div>
-          <button class="details-btn" type="button" id="details-btn" aria-expanded="false" aria-controls="details">Show details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="details" id="details">
-            <div class="d-row"><span>Route</span><b>Ethereum ↔ Mantle</b></div>
-            <div class="d-row"><span>Bridge type</span><b>Canonical token bridge</b></div>
-            <div class="d-row"><span>Mantle chain ID</span><b>5000</b></div>
-            <div class="d-row"><span>Network gas</span><b>ETH on Ethereum; MNT on Mantle</b></div>
-          </div>
-          <a class="cta" href="dashboard/" target="_blank" rel="noopener noreferrer">Open app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
-          
-      </div>
-      <div class="hero-chips">
-        <a class="hchip" href="https://www.coingecko.com/en/coins/mantle" target="_blank" rel="noopener noreferrer">MNT price <b id="sig0">—</b> <span class="ext" aria-hidden="true">↗</span></a>
-          <a class="hchip" href="https://defillama.com/protocol/mantle-bridge" target="_blank" rel="noopener noreferrer">Bridge TVL <b id="sig1">—</b> <span class="ext" aria-hidden="true">↗</span></a>
-          <a class="hchip" href="https://docs.mantle.xyz/network/for-developers/quick-access" target="_blank" rel="noopener noreferrer">Mantle gas <b id="sig2">—</b> <span class="ext" aria-hidden="true">↗</span></a>
-      </div>
-    </main>
   </div>
+  <div class="hero-r">
+    <div class="widget">
+      <div class="w-head"><b>Bridge</b><span class="w-tag">Preview</span></div>
+      <div class="leg"><span class="tok"><img src="eth.png" alt="ETH" width="22" height="22"><span>ETH<br><span class="net">Ethereum</span></span></span><span style="text-align:right"><div class="amt">0.0</div><div class="sub">≈ $0</div></span></div>
+      <div class="swapbtn"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4v13M8 4L4 8M8 4l4 4M16 20V7M16 20l-4-4M16 20l4-4"/></svg></i></div>
+      <div class="leg"><span class="tok"><img src="mnt.png" alt="MNT" width="22" height="22"><span>MNT<br><span class="net">Mantle</span></span></span><span style="text-align:right"><div class="amt">0.0</div><div class="sub">≈ $0</div></span></div>
+      <div class="w-route"><span>Route · Ethereum → Mantle</span><b>~2 min</b></div>
+      <a class="w-cta" href="dashboard/" data-open-modal target="_blank" rel="noopener noreferrer">Go to Swap</a>
+      <p class="w-note">Preview only · opens the bridge app in a new tab ↗</p>
+    </div>
   </div>
+  <a class="scrollcue" href="#numbers" aria-label="Scroll to learn more">
+    <span>Scroll</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M12 19l-6-6M12 19l6-6"/></svg>
+  </a>
+</section>
 
-  <script>
+<section class="numbers" id="numbers"><div class="wrap">
+  <h2 class="sec-h">Mantle at a glance</h2>
+  <div class="stat-grid"><div class="stat"><div class="stat-n">5000</div><div class="stat-l">Mantle chain&nbsp;ID</div><a class="stat-v" href="https://docs.mantle.xyz/network/for-users/getting-started/what-is-mantle-network" target="_blank" rel="noopener noreferrer">Verify · Mantle docs <span aria-hidden="true">↗</span></a></div><div class="stat"><div class="stat-n"><b id="num-tvl">…</b></div><div class="stat-l">Mantle network TVL</div><a class="stat-v" href="https://defillama.com/chain/Mantle" target="_blank" rel="noopener noreferrer">Verify · DeFiLlama <span aria-hidden="true">↗</span></a></div><div class="stat"><div class="stat-n">~2 min</div><div class="stat-l">Typical deposit (L1&nbsp;→&nbsp;L2)</div><a class="stat-v" href="https://docs.mantle.xyz/network/for-users/how-to-guides/bridge-tokens" target="_blank" rel="noopener noreferrer">Verify · Mantle bridge guide <span aria-hidden="true">↗</span></a></div><div class="stat"><div class="stat-n">≤ ~12h</div><div class="stat-l">Native withdrawal finality</div><a class="stat-v" href="https://docs.mantle.xyz/network/for-users/how-to-guides/bridge-tokens" target="_blank" rel="noopener noreferrer">Verify · Mantle bridge guide <span aria-hidden="true">↗</span></a></div></div>
+</div></section>
+
+<section class="content"><div class="wrap">
+  <h2 class="sec-h">Bridging between Ethereum and Mantle</h2>
+  <p class="content-lede lede">Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.</p>
+  <div class="blocks"><article class="block reveal" id="what">
+<h2>What is this bridge?</h2>
+<div class="prose"><p>Mantle Bridge is the canonical bridge: the route Mantle itself maintains for moving supported tokens between Ethereum and Mantle Network. "Canonical" matters. Instead of a liquidity pool or a third-party relayer, the bridge escrows the source asset in an L1 contract and mints or releases a mapped representation on Mantle — the token you receive is backed by the canonical mapping, not by a market maker's inventory.</p><p>That distinction decides which tokens you can move. Only pairs from Mantle's maintained token list are supported; an arbitrary ERC-20 with no mapping will not bridge. Third-party bridges can fill gaps for unlisted tokens or offer faster exits via liquidity networks, but they introduce their own pool, routing, and counterparty assumptions on top of the <a href="https://ethereum.org/layer-2/learn/">base layer-2 bridging model</a>. For standard ETH and listed ERC-20s, the canonical route is the reference implementation everything else is measured against.</p></div>
+</article>
+<article class="block reveal" id="how">
+<h2>How bridging works</h2>
+<div class="prose"><p>The mechanism is escrow-plus-message, not a swap. Connect an EVM wallet, choose Ethereum or Mantle as the source, select a listed token, and enter an amount. For an ERC-20 deposit you first sign an approval letting the bridge contract spend that token, then submit the actual deposit transaction. The L1 bridge escrows the asset and emits a cross-domain message; the corresponding Mantle token is minted or released on the L2 side per its mapping.</p><p>Withdrawals run the same flow in reverse with one extra step that trips people up: after initiating on Mantle, the withdrawal finalizes through Mantle's rollup system and is not complete until you send a claim transaction on Ethereum to release the L1 asset. Two practical points: the approval and the bridge call are separate transactions, so budget gas for both, and an approval is a standing permission — approve only what you intend to move, and review allowances on tokens you bridge infrequently.</p></div>
+</article>
+<article class="block reveal" id="deposit">
+<h2>Depositing to the destination</h2>
+<div class="prose"><p>A deposit is Ethereum → Mantle, and it is the simple direction. Set your wallet to Ethereum mainnet (chain ID 1), pick the token from the supported list, approve if required, and confirm. The official FAQ describes deposits as typically taking about two minutes, which matches the mental model: one L1 confirmation cycle plus message relay, then the balance shows on Mantle (chain ID 5000).</p><p>Keep gas on both sides before you start. ETH pays the Ethereum transaction; you need MNT on Mantle the moment you want to do anything with the bridged funds. If you are bridging ETH itself, some of it arriving as gas money solves part of this — but if you are bridging a stablecoin into an empty Mantle wallet, you will be stuck until MNT arrives. Testing the flow first on Mantle Sepolia (chain ID 5003) costs nothing and confirms your wallet handles the network switch cleanly.</p></div>
+</article>
+<article class="block reveal" id="withdraw">
+<h2>Withdrawing back</h2>
+<div class="prose"><p>A withdrawal is Mantle → Ethereum, and it is the direction with real latency. You initiate on Mantle (paying MNT gas), the withdrawal is proven and finalized through Mantle's rollup system — which currently posts data to Ethereum and validates state with ZK proofs — and then you submit a claim transaction on Ethereum (paying ETH gas) to actually release the asset. The official FAQ puts the end-to-end window at up to twelve hours.</p><p>Two rules from experience. First, do not duplicate the initiation because the L1 side looks quiet — the withdrawal exists on Mantle the moment you sign, and re-sending just creates a second pending withdrawal. Track the status and wait for the claim step to become available. Second, keep ETH on mainnet for the claim; a finalized withdrawal you cannot afford to claim is a common and avoidable stall.</p></div>
+</article>
+<article class="block reveal" id="fees">
+<h2>Time and fees</h2>
+<div class="prose"><p>The fee structure is plain gas on both chains — there is no percentage skim on the canonical route itself. Deposits cost Ethereum gas for the approval (if needed) plus the deposit transaction, so the real variable is L1 gas at the moment you send. Withdrawals cost MNT to initiate on Mantle and ETH to claim on Ethereum, with the L1 claim usually being the larger of the two.</p><p>Time follows the same split: deposits are measured in minutes, withdrawals in hours because of proving and finalization. Third-party liquidity bridges can advertise faster exits, but they charge a provider fee for that speed and take on pool risk to do it — you are paying to skip the wait, not getting it free. If gas on Ethereum is spiking, a small ERC-20 deposit can cost more in fees than makes sense; batching or waiting for a quieter block window is the standard move.</p></div>
+</article>
+<article class="block reveal" id="safety">
+<h2>Is it safe?</h2>
+<div class="prose"><p>Mantle Bridge is Mantle's canonical bridge, the network's contracts are <a href="https://github.com/mantlenetworkio/mantle">open source</a>, and the underlying system has published audits — but none of that makes any bridge risk-free. The honest risk list: the bridge and rollup contracts are upgradeable, so you inherit smart-contract, governance, operator, and implementation risk; proof-system faults or operator outages can delay or affect withdrawals; and token-mapping errors can strand exotic assets. Independent risk profiles like <a href="https://l2beat.com/scaling/projects/mantle">L2BEAT's Mantle assessment</a> are worth reading precisely because they grade these assumptions rather than marketing them.</p><p>The bigger day-to-day threat is phishing, not the contracts. Fake bridge sites with lookalike domains are the standard attack on exactly this search intent. Verify the official domain, check the contract you are approving against the known addresses — the L1 Standard Bridge proxy is 0x95fC37A27a2f68e3A647CDc081F0A89bb47c3012, the L2 Standard Bridge is the canonical predeploy 0x4200000000000000000000000000000000000010 — and never bridge from a link sent to you. Your wallet holds its keys and signs everything, but bridged assets sit in escrow contracts until finalization, so contract risk is real for the duration.</p></div>
+</article>
+<article class="block reveal" id="troubleshoot">
+<h2>Problems and fixes</h2>
+<div class="prose"><p>Most bridge issues are one of five things. <strong>Wrong network:</strong> the interface and your wallet must agree on the source chain — Ethereum is chain ID 1, Mantle is 5000, and a wallet sitting on the wrong side will either fail to load your balance or prompt a confusing transaction. Switch networks and reload before assuming anything is broken. <strong>No destination gas:</strong> bridged funds arrived but you cannot move them because the wallet has no MNT (or, when claiming a withdrawal, no ETH). Fund the gas side first; the assets are fine.</p><p><strong>Pending deposit or withdrawal:</strong> deposits resolve in minutes, so a long-pending deposit usually means the L1 transaction itself is stuck — check it on a block explorer rather than re-sending. A withdrawal sitting quiet for hours is normal; wait for finalization and the claim step. <strong>Token not listed:</strong> if your ERC-20 has no mapping, the canonical bridge cannot take it — that is a routing constraint, not an error. <strong>Suspect site:</strong> if anything about the domain, approval target, or requested permissions looks off, stop, verify the official contracts, and revoke any approval you already granted before proceeding.</p></div>
+</article>
+</div>
+</div></section>
+
+<section class="faq" id="faq"><div class="wrap">
+  <h2 class="sec-h">Got questions?</h2>
+  <div class="faq-list"><div class="qa reveal"><span class="qn">01</span><div><h3>Is this the official Mantle Bridge site?</h3><div class="prose">No. This is an independent reference dashboard that explains how the bridge works; it does not operate the bridge or hold funds. Always navigate to the official Mantle interface yourself and verify the domain before connecting a wallet.</div></div></div>
+<div class="qa reveal"><span class="qn">02</span><div><h3>How long does Mantle Bridge take?</h3><div class="prose">The official FAQ describes deposits (Ethereum → Mantle) as typically about two minutes and withdrawals (Mantle → Ethereum) as up to twelve hours, since withdrawals must prove and finalize through the rollup before an Ethereum claim releases the funds.</div></div></div>
+<div class="qa reveal"><span class="qn">03</span><div><h3>How do I bridge to Mantle Network?</h3><div class="prose">Connect an EVM wallet on Ethereum mainnet, select a token from Mantle's supported list, sign the approval if prompted, then confirm the deposit transaction. The mapped token arrives on Mantle (chain ID 5000) once the cross-domain message is processed.</div></div></div>
+<div class="qa reveal"><span class="qn">04</span><div><h3>Do I need MNT before bridging to Mantle?</h3><div class="prose">Yes, for anything after arrival: MNT pays gas on Mantle, so bridged tokens in an empty wallet are stuck until MNT shows up. You also need ETH on mainnet later to claim any withdrawal back to Ethereum.</div></div></div>
+<div class="qa reveal"><span class="qn">05</span><div><h3>Is Mantle Bridge safe to use?</h3><div class="prose">It is Mantle's canonical bridge with open-source contracts and published audits, but that is not a guarantee — upgradeable contracts, proof-system faults, operator outages, and phishing all remain real risks. Check the <a href="https://l2beat.com/scaling/projects/mantle">independent risk assessment</a> and verify contract addresses before signing.</div></div></div>
+<div class="qa reveal"><span class="qn">06</span><div><h3>Should I use the canonical bridge or a third-party bridge?</h3><div class="prose">The canonical route escrows and mints mapped tokens with no provider fee beyond gas, but withdrawals take hours; third-party liquidity bridges can be faster on exits while charging a fee and adding pool and routing risk. For listed tokens with no time pressure, the canonical route is the baseline; for <a href="https://defillama.com/protocol/mantle-bridge">context on bridge usage</a>, public dashboards show how the routes compare.</div></div></div>
+</div>
+</div></section>
+
+<div class="wrap"><section class="disc reveal"><h2>Notes before you use Mantle Bridge</h2><div class="prose"><p><strong>Practitioner note:</strong> the canonical bridge is boring by design, and boring is what you want — escrow in, mapped token out, no market maker in the middle.</p><p>The common mistake is treating a withdrawal like a deposit: people sign on Mantle, see nothing on Ethereum an hour later, and re-send or panic, when the proving window plus a separate L1 claim is simply how the route works.</p><p><strong>Before you sign:</strong></p><ul><li>Confirm you are on the official bridge interface and that the approval targets the known contracts — the L1 Standard Bridge proxy is 0x95fC37A27a2f68e3A647CDc081F0A89bb47c3012, the L2 Standard Bridge is 0x4200000000000000000000000000000000000010.</li><li>Check the source and destination networks in your wallet: Ethereum is chain ID 1, Mantle is 5000, and a wrong-network wallet is behind most "stuck" reports.</li><li>Keep gas on both chains — ETH for the Ethereum side, MNT for the Mantle side — and go in understanding the withdrawal wait is hours, not minutes.</li></ul><p>Contract addresses, chain IDs, and timing figures above were checked against Mantle's official documentation and FAQ, last reviewed 21 July 2026.</p><p>Independent reference — confirm the route in your own wallet.</p></div></section></div>
+
+</main>
+
+<footer><div class="wrap"><strong>Independent</strong> Mantle Bridge information dashboard — not affiliated with any official product. No custody, no financial advice. · <a href="dashboard/" target="_blank" rel="noopener noreferrer">Open app ↗</a> · © 2026</div></footer>
+
+<div class="mroot" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="m-title">
+  <div class="mbg" data-close></div>
+  <div class="mcard">
+    <div class="mtop">
+      <span class="mbrand"><span class="dot"></span>Mantle Bridge</span>
+      <button class="mx" type="button" data-close aria-label="Close">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <h2 id="m-title" class="sr-only">Continue to the Mantle bridge</h2>
+    <div class="mroute">
+      <span class="mchip"><img src="eth.png" alt="ETH" width="34" height="34"><b>ETH</b><span>Ethereum</span></span>
+      <span class="marrow"><svg width="26" height="14" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h22M19 3l4 4-4 4"/></svg></span>
+      <span class="mchip"><img src="mnt.png" alt="MNT" width="34" height="34"><b>MNT</b><span>Mantle</span></span>
+    </div>
+    <div class="mbar"><i id="mbar"></i></div>
+    <div class="mscan" id="mscan">
+      <span class="mspin" id="mspin"></span>
+      <svg class="mcheck" id="mcheck" hidden viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6L9 17l-5-5"/></svg>
+      <span id="mscan-txt">Scanning the canonical route, Ethereum → Mantle…</span>
+    </div>
+    <a class="mcta" id="mcta" href="dashboard/" target="_blank" rel="noopener noreferrer">Continue to Swap <span aria-hidden="true">↗</span></a>
+    <p class="mnote">Preview · opens the Mantle bridge app in a new tab. <a href="https://docs.mantle.xyz/network/for-users/how-to-guides/bridge-tokens" target="_blank" rel="noopener noreferrer">Verify the route ↗</a></p>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* route modal */
+  var modal=document.getElementById('modal');
+  if(modal){
+    var mbar=document.getElementById('mbar'),mscan=document.getElementById('mscan'),mspin=document.getElementById('mspin'),mcheck=document.getElementById('mcheck'),mtxt=document.getElementById('mscan-txt'),mcta=document.getElementById('mcta'),last=null,timer=null;
+    function openModal(trigger){
+      last=trigger||document.activeElement;
+      modal.hidden=false;document.body.style.overflow='hidden';
+      requestAnimationFrame(function(){modal.classList.add('in');});
+      mscan.classList.remove('done');mspin.hidden=false;mcheck.hidden=true;
+      mtxt.textContent='Scanning the canonical route, Ethereum → Mantle…';
+      mbar.style.width='0';requestAnimationFrame(function(){mbar.style.width='100%';});
+      clearTimeout(timer);
+      timer=setTimeout(function(){mscan.classList.add('done');mspin.hidden=true;mcheck.hidden=false;mtxt.textContent='Canonical route ready · ~2 min · gas only';if(!modal.hidden)mcta.focus();},1250);
+    }
+    function closeModal(){modal.classList.remove('in');document.body.style.overflow='';clearTimeout(timer);setTimeout(function(){modal.hidden=true;if(last&&last.focus)last.focus();},240);}
+    [].forEach.call(document.querySelectorAll('[data-open-modal]'),function(b){b.addEventListener('click',function(e){e.preventDefault();openModal(b);});});
+    [].forEach.call(modal.querySelectorAll('[data-close]'),function(b){b.addEventListener('click',closeModal);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!modal.hidden)closeModal();});
+  }
+  var io=window.IntersectionObserver&&new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
+  var r=document.querySelectorAll('.reveal');
+  if(io){r.forEach(function(el){io.observe(el);});}else{r.forEach(function(el){el.classList.add('in');});}
+  function $(id){return document.getElementById(id);}
+  var SIGNALS = [{"t": "price", "id": "sig-mnt", "cg": "mantle", "chg": true, "label": "MNT", "link": "https://coinmarketcap.com/currencies/mantle/"}, {"t": "price", "id": "sig-eth", "cg": "ethereum", "chg": true, "label": "ETH", "link": "https://www.coingecko.com/en/coins/ethereum"}, {"t": "ctvl", "id": "num-tvl", "ch": "Mantle", "label": "Mantle TVL", "link": "https://defillama.com/chain/Mantle"}];
   (function(){
-    "use strict";
-    var $=function(id){ return document.getElementById(id); };
-    var root=document.documentElement, tl=$("theme-light"), td=$("theme-dark");
-    function applyTheme(t){ if(t==="dark"){ root.setAttribute("data-theme","dark"); } else { root.removeAttribute("data-theme"); } if(tl) tl.setAttribute("aria-pressed", String(t!=="dark")); if(td) td.setAttribute("aria-pressed", String(t==="dark")); }
-    var saved=null; try{ saved=localStorage.getItem("mantlebrid-theme"); }catch(e){}
-    if(saved) applyTheme(saved);
-    function setTheme(t){ applyTheme(t); try{ localStorage.setItem("mantlebrid-theme", t); }catch(e){} }
-    if(tl) tl.addEventListener("click", function(){ setTheme("light"); });
-    if(td) td.addEventListener("click", function(){ setTheme("dark"); });
-    var body=document.body, hamb=$("hamb"), scrim=$("scrim"), drawer=$("drawer"), dclose=$("drawer-close");
-    function openD(){ body.classList.add("drawer-open"); hamb.setAttribute("aria-expanded","true"); drawer.setAttribute("aria-hidden","false"); }
-    function closeD(){ body.classList.remove("drawer-open"); hamb.setAttribute("aria-expanded","false"); drawer.setAttribute("aria-hidden","true"); }
-    if(hamb) hamb.addEventListener("click", function(){ body.classList.contains("drawer-open")?closeD():openD(); });
-    if(scrim) scrim.addEventListener("click", closeD);
-    if(dclose) dclose.addEventListener("click", closeD);
-    document.addEventListener("keydown", function(e){ if(e.key==="Escape" && body.classList.contains("drawer-open")) closeD(); });
-    if(drawer) drawer.addEventListener("click", function(e){ if(e.target.closest("a")) closeD(); });
-    var reversed=false;
-    var TOK={ A:{img:"eth.png",name:"ETH",sub:"on ETH",alt:"ETH logo"}, B:{img:"mnt.png",name:"MNT",sub:"on MNT",alt:"MNT logo"} };
-    var chev='<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
-    function pill(role,k){ var n=TOK[k]; return '<img src="'+n.img+'" alt="'+n.alt+'" width="26" height="26"><span class="token-meta"><small>'+role+'</small><b>'+n.name+'</b></span>'+chev; }
-    function render(){ var a=reversed?"B":"A", b=reversed?"A":"B"; $("pill-from").innerHTML=pill("From",a); $("pill-to").innerHTML=pill("To",b); $("sub-from").textContent=TOK[a].sub; $("sub-to").textContent=TOK[b].sub; }
-    var rev=$("reverse"); if(rev) rev.addEventListener("click", function(){ reversed=!reversed; render(); });
-    var db=$("details-btn"), dp=$("details");
-    if(db&&dp) db.addEventListener("click", function(){ var open=dp.classList.toggle("open"); db.setAttribute("aria-expanded", String(open)); db.firstChild.textContent = open?"Hide details ":"Show details "; });
-    function money(n){ if(n>=1e9) return "$"+(n/1e9).toFixed(2)+"B"; if(n>=1e6) return "$"+(n/1e6).toFixed(1)+"M"; if(n>=1e3) return "$"+(n/1e3).toFixed(0)+"K"; return "$"+n.toFixed(0); }
-    function gwei(g){ return (g>=0.1?g.toFixed(2):(g>=0.001?g.toFixed(3):Number(g.toPrecision(2)).toString()))+" gwei"; }
-    function grab(url,opt){ var c="AbortController" in window ? new AbortController():null, t=c?setTimeout(function(){c.abort();},7000):null; var o=opt||{}; if(c) o.signal=c.signal; return fetch(url,o).then(function(r){ if(!r.ok) throw 0; return r.json(); }).finally(function(){ if(t) clearTimeout(t); }); }
-    grab("https://coins.llama.fi/prices/current/coingecko:mantle").then(function(j){ var c=j&&j.coins&&j.coins["coingecko:mantle"], v=c&&Number(c.price); if(isFinite(v)&&v>0) $("sig0").textContent="$"+v.toLocaleString("en-US",{maximumFractionDigits:4}); }).catch(function(){});
-    grab("https://api.llama.fi/protocol/mantle-bridge").then(function(j){ var a=j&&j.tvl; if(!a||!a.length) return; var last=a[a.length-1], v=Number(last.totalLiquidityUSD!=null?last.totalLiquidityUSD:last.tvl); if(isFinite(v)&&v>0) $("sig1").textContent=money(v); }).catch(function(){});
-    grab("https://rpc.mantle.xyz",{ method:"POST", headers:{"Content-Type":"application/json"}, body:'{"jsonrpc":"2.0","id":1,"method":"eth_gasPrice","params":[]}' }).then(function(j){ var wei=j&&j.result?parseInt(j.result,16):NaN; if(isFinite(wei)&&wei>0) $("sig2").textContent=gwei(wei/1e9); }).catch(function(){});
+    var S = SIGNALS; if(!S||!S.length) return;
+    function el(id){return document.getElementById(id);}
+    function hide(id){var e=el(id);if(e){var t=e.closest(".tick");if(t)t.style.display="none";}}
+    function set(id,x){var e=el(id);if(e)e.textContent=x;}
+    function usd(n){n=Number(n);return "$"+n.toLocaleString("en-US",{maximumFractionDigits:n<1?4:0});}
+    function big(n){n=Number(n);if(n>=1e9)return "$"+(n/1e9).toFixed(2)+"B";if(n>=1e6)return "$"+(n/1e6).toFixed(1)+"M";if(n>=1e3)return "$"+(n/1e3).toFixed(1)+"K";return "$"+Math.round(n);}
+    function jf(u){return fetch(u).then(function(r){if(!r.ok)throw 0;return r.json();});}
+    var coins = S.filter(function(s){return s.t==="price"||s.t==="mcap";});
+    if(coins.length){
+      var ids=coins.map(function(s){return s.cg;}).filter(function(v,i,a){return a.indexOf(v)===i;}).join(",");
+      jf("https://api.coingecko.com/api/v3/simple/price?ids="+ids+"&vs_currencies=usd&include_24hr_change=true&include_market_cap=true")
+        .then(function(v){coins.forEach(function(s){var d=v[s.cg];if(!d){hide(s.id);return;}
+          if(s.t==="mcap"){isFinite(d.usd_market_cap)&&d.usd_market_cap>0?set(s.id,big(d.usd_market_cap)):hide(s.id);return;}
+          if(isFinite(d.usd)){var x=usd(d.usd);if(s.chg&&isFinite(d.usd_24h_change)){var c=d.usd_24h_change;x+=" "+(c>=0?"▲":"▼")+Math.abs(c).toFixed(1)+"%";}set(s.id,x);}else hide(s.id);});})
+        .catch(function(){coins.forEach(function(s){hide(s.id);});});
+    }
+    S.forEach(function(s){
+      if(s.t==="tvl") jf("https://api.llama.fi/tvl/"+s.sl).then(function(v){var n=Number(v);isFinite(n)&&n>0?set(s.id,big(n)):hide(s.id);}).catch(function(){hide(s.id);});
+      else if(s.t==="vol") jf("https://api.llama.fi/summary/dexs/"+s.sl+"?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true").then(function(v){var n=v&&Number(v.total24h);isFinite(n)&&n>0?set(s.id,big(n)):hide(s.id);}).catch(function(){hide(s.id);});
+      else if(s.t==="ctvl") jf("https://api.llama.fi/v2/chains").then(function(a){var f=(a||[]).filter(function(c){return c.name===s.ch;})[0];f&&isFinite(f.tvl)&&f.tvl>0?set(s.id,big(f.tvl)):hide(s.id);}).catch(function(){hide(s.id);});
+    });
   })();
-  </script>
+})();
+</script>
 </body>
 </html>

@@ -1,66 +1,31 @@
 # Mantle Bridge
-> Mantle Bridge is the canonical smart-contract bridge for transferring supported assets between Ethereum and Mantle Network.
 
-## What is Mantle Bridge
-Mantle Bridge moves supported tokens between Ethereum Layer 1 and Mantle Network, an EVM-compatible Ethereum rollup. It uses canonical bridge contracts and mapped token representations rather than a liquidity pool or third-party relayer route. The bridge is self-custodial at the wallet level, although bridged assets may be escrowed in smart contracts. This independent dashboard provides information only and does not operate the bridge.
-
-## How it works
-1. Connect an EVM wallet, select Ethereum or Mantle as the source, choose a listed token, and enter an amount.
-2. For an ERC-20 deposit, approve the bridge if required, then submit the Ethereum transaction.
-3. The L1 bridge escrows or processes the source asset and sends a cross-domain message; the corresponding Mantle token is minted or released according to its mapping.
-4. A withdrawal reverses that process, finalizes through Mantle’s rollup system, and requires an Ethereum claim transaction before the L1 asset is released.
+> Mantle Bridge moves supported tokens between Ethereum and Mantle Network through canonical contracts — deposits, withdrawals, approvals, and finalization covered here.
 
 ## Key facts
-- Ethereum mainnet is chain ID 1; Mantle mainnet is chain ID 5000.
-- Mantle Sepolia testnet uses chain ID 5003.
-- ETH pays Ethereum-side gas; MNT pays Mantle-side gas.
-- Mantle is EVM-compatible and currently posts rollup data to Ethereum while validating state through OP Succinct ZK proofs.
-- Supported ERC-20 pairs come from Mantle’s maintained token list; not every token is bridgeable.
-- The L1 Standard Bridge proxy is `0x95fC37A27a2f68e3A647CDc081F0A89bb47c3012`.
-- The L2 Standard Bridge is `0x4200000000000000000000000000000000000010`.
-- The official FAQ describes deposits as typically taking about two minutes and withdrawals as taking up to twelve hours.
-- Bridge and rollup contracts are upgradeable, so users inherit smart-contract, governance, operator, and implementation risk.
+- Route: Ethereum mainnet (chain ID 1)  Mantle mainnet (chain ID 5000)
+- Deposit: Typically about two minutes per the official FAQ
+- Withdraw: Up to ~12 hours, plus an Ethereum claim transaction
+- Gas: ETH on Ethereum, MNT on Mantle
+- Custody: Non-custodial — your wallet signs every transaction
+- Verify: Use the official contracts; beware fake bridge sites
 
-## Common questions
-### Is Mantle Bridge safe?
-It is Mantle’s canonical bridge and its underlying network has published audits. Safety is not absolute: verify the official domain and consider contract upgrades, proof-system faults, operator outages, token-mapping errors, and phishing.
-
-### Who controls my funds?
-Your wallet retains its keys and signs every transaction. During bridging, assets or their backing may be held by bridge contracts until the corresponding withdrawal is finalized.
-
-### What fees apply?
-Deposits require Ethereum gas; withdrawals require MNT to initiate on Mantle and ETH to claim on Ethereum. Wallet approvals can add another Ethereum transaction.
-
-### How long does bridging take?
-The current official FAQ says deposits typically complete in about two minutes and withdrawals can take up to twelve hours. Older seven-day guidance predates the current bridge timing.
-
-### Which assets and chains are supported?
-The canonical route connects Ethereum and Mantle. Live assets are determined by the bridge token list; the official FAQ identifies ETH, USDC, USDT0, and legacy bridged USDT representations.
-
-### How do I start?
-Open the verified official bridge, connect an EVM wallet, confirm both networks and the token mapping, maintain the required gas assets, and consider a small test transfer first.
+## On this page
+- [What is Mantle Bridge?](https://mantlebridge.github.io/#what)
+- [How bridging works](https://mantlebridge.github.io/#how)
+- [Depositing to the destination](https://mantlebridge.github.io/#deposit)
+- [Withdrawing back](https://mantlebridge.github.io/#withdraw)
+- [Time and fees](https://mantlebridge.github.io/#fees)
+- [Is Mantle Bridge safe?](https://mantlebridge.github.io/#safety)
+- [Problems and fixes](https://mantlebridge.github.io/#troubleshoot)
+- [FAQ](https://mantlebridge.github.io/#faq)
 
 ## App
-- Dashboard: https://mantlebridge.github.io/
-- App: https://mantlebridge.github.io/dashboard/
+- [Mantle Bridge dashboard](https://mantlebridge.github.io/)
+- [Open the app](https://mantlebridge.github.io/dashboard/)
 
-## Official resources
-Official bridge: https://app.mantle.xyz/bridge
-Bridge FAQ: https://app.mantle.xyz/faq
-Bridge guide: https://www.mantle.xyz/blog/announcements/bridging-on-mantle-mainnet
-Mantle documentation: https://docs.mantle.xyz/
-Network quick access: https://docs.mantle.xyz/network/for-developers/quick-access
-L1 contract addresses: https://docs.mantle.xyz/network/system-information/on-chain-system/key-l1-contract-address
-L2 contract addresses: https://docs.mantle.xyz/network/system-information/off-chain-system/key-l2-contract-address
-Token list: https://token-list.mantle.xyz/
-Source code: https://github.com/mantlenetworkio
-Audits: https://docs.mantle.xyz/network/more/audits
-Official X: https://x.com/Mantle_Official
-
-## Data & references
-Mantle on L2BEAT: https://l2beat.com/scaling/projects/mantle
-Mantle explorer: https://mantlescan.xyz/
-L1 Standard Bridge on Etherscan: https://etherscan.io/address/0x95fC37A27a2f68e3A647CDc081F0A89bb47c3012
-Mantle on CoinGecko: https://www.coingecko.com/en/coins/mantle
-Mantle on DeFiLlama: https://defillama.com/chain/mantle
-ERC-20 standard: https://eips.ethereum.org/EIPS/eip-20
+## Sources
+- [docs.mantle.xyz](https://docs.mantle.xyz/network)
+- [l2beat.com](https://l2beat.com/scaling/projects/mantle)
+- [ethereum.org](https://ethereum.org/layer-2/learn/)
+- [github.com](https://github.com/mantlenetworkio/mantle)
