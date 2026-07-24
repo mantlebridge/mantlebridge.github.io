@@ -1,25 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Mantle Bridge — Dashboard</title>
-<meta name="description" content="Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://mantlebridge.github.io/">
-<link rel="icon" type="image/png" href="favicon.png">
-<meta name="theme-color" content="#f6f7f9">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://mantlebridge.github.io/">
-<meta property="og:title" content="Mantle Bridge — Dashboard">
-<meta property="og:description" content="Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.">
-<meta property="og:site_name" content="Mantle Bridge">
-<meta property="og:image" content="https://mantlebridge.github.io/og-cover.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mantle Bridge — Dashboard">
-<meta name="twitter:description" content="Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.">
-<meta name="twitter:image" content="https://mantlebridge.github.io/og-cover.png">
-<link rel="manifest" href="manifest.webmanifest">
+<meta content="Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner." name="description"/>
+<meta content="index,follow,max-image-preview:large" name="robots"/>
+<link href="https://mantlebridge.github.io/" rel="canonical"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<meta content="#f6f7f9" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="https://mantlebridge.github.io/" property="og:url"/>
+<meta content="Mantle Bridge — Dashboard" property="og:title"/>
+<meta content="Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner." property="og:description"/>
+<meta content="Mantle Bridge" property="og:site_name"/>
+<meta content="https://mantlebridge.github.io/og-cover.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Mantle Bridge — Dashboard" name="twitter:title"/>
+<meta content="Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner." name="twitter:description"/>
+<meta content="https://mantlebridge.github.io/og-cover.png" name="twitter:image"/>
+<link href="manifest.webmanifest" rel="manifest"/>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://mantlebridge.github.io/#website", "url": "https://mantlebridge.github.io/", "name": "Mantle Bridge", "inLanguage": "en"}, {"@type": "SoftwareApplication", "@id": "https://mantlebridge.github.io/#brand", "name": "Mantle bridge", "alternateName": ["Mantle Bridge", "Mantle"], "description": "Cross-chain bridge routes for moving assets to and from Mantle, via native or third-party bridges.", "sameAs": ["https://docs.mantle.xyz/network", "https://ethereum.org/layer-2/learn/", "https://github.com/mantlenetworkio/mantle", "https://www.coingecko.com/en/coins/mantle", "https://docs.mantle.xyz/network/for-developers/quick-access"], "applicationCategory": "FinanceApplication", "operatingSystem": "Web"}, {"@type": "WebPage", "@id": "https://mantlebridge.github.io/#webpage", "url": "https://mantlebridge.github.io/", "name": "Mantle Bridge — Dashboard", "description": "Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.", "isPartOf": {"@id": "https://mantlebridge.github.io/#website"}, "about": {"@id": "https://mantlebridge.github.io/#brand"}, "mainEntity": {"@id": "https://mantlebridge.github.io/#brand"}, "inLanguage": "en", "dateModified": "2026-07-22"}, {"@type": "FAQPage", "@id": "https://mantlebridge.github.io/#faq", "mainEntity": [{"@type": "Question", "name": "Is this the official Mantle Bridge site?", "acceptedAnswer": {"@type": "Answer", "text": "No. This is an independent reference dashboard that explains how the bridge works; it does not operate the bridge or hold funds. Always navigate to the official Mantle interface yourself and verify the domain before connecting a wallet."}}, {"@type": "Question", "name": "How long does Mantle Bridge take?", "acceptedAnswer": {"@type": "Answer", "text": "The official FAQ describes deposits (Ethereum → Mantle) as typically about two minutes and withdrawals (Mantle → Ethereum) as up to twelve hours, since withdrawals must prove and finalize through the rollup before an Ethereum claim releases the funds."}}, {"@type": "Question", "name": "How do I bridge to Mantle Network?", "acceptedAnswer": {"@type": "Answer", "text": "Connect an EVM wallet on Ethereum mainnet, select a token from Mantle's supported list, sign the approval if prompted, then confirm the deposit transaction. The mapped token arrives on Mantle (chain ID 5000) once the cross-domain message is processed."}}, {"@type": "Question", "name": "Do I need MNT before bridging to Mantle?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for anything after arrival: MNT pays gas on Mantle, so bridged tokens in an empty wallet are stuck until MNT shows up. You also need ETH on mainnet later to claim any withdrawal back to Ethereum."}}, {"@type": "Question", "name": "Is Mantle Bridge safe to use?", "acceptedAnswer": {"@type": "Answer", "text": "It is Mantle's canonical bridge with open-source contracts and published audits, but that is not a guarantee — upgradeable contracts, proof-system faults, operator outages, and phishing all remain real risks. Check the independent risk assessment and verify contract addresses before signing."}}, {"@type": "Question", "name": "Should I use the canonical bridge or a third-party bridge?", "acceptedAnswer": {"@type": "Answer", "text": "The canonical route escrows and mints mapped tokens with no provider fee beyond gas, but withdrawals take hours; third-party liquidity bridges can be faster on exits while charging a fee and adding pool and routing risk. For listed tokens with no time pressure, the canonical route is the baseline; for context on bridge usage, public dashboards show how the routes compare."}}]}]}</script>
 <style>
 :root{--bg:#f6f7f9;--surface:#fff;--ink:#0b0d12;--text:#484f5c;--muted:#8b93a1;--line:rgba(11,13,18,.09);--line2:rgba(11,13,18,.14);--acc:#0e9f6e;--acc-ink:#0a7d57;--r:14px;--ease:cubic-bezier(.22,.7,.24,1);--font:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
@@ -173,53 +174,50 @@ footer a{color:var(--acc-ink);text-decoration:none}
 </head>
 <body>
 <header class="nav"><div class="nav-in">
-  <a class="brand" href="./"><span class="dot"></span>Mantle Bridge</a>
-  <nav class="nav-mid">
-    <div class="hasmenu"><span>Bridge guide <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg></span>
-      <div class="menu"><a href="#what">What is this bridge?</a><a href="#how">How bridging works</a><a href="#deposit">Depositing to the destination</a><a href="#withdraw">Withdrawing back</a><a href="#fees">Time and fees</a><a href="#safety">Is it safe?</a><a href="#troubleshoot">Problems and fixes</a></div></div>
-    <a href="#how">How it works</a><a href="#fees">Fees</a><a href="#safety">Safety</a><a href="#faq">FAQ</a>
-  </nav>
-  <div class="nav-r"><div class="sigs"><a class="sig tick" href="https://coinmarketcap.com/currencies/mantle/" target="_blank" rel="noopener noreferrer"><span>MNT</span><b id="sig-mnt">…</b></a><a class="sig tick" href="https://www.coingecko.com/en/coins/ethereum" target="_blank" rel="noopener noreferrer"><span>ETH</span><b id="sig-eth">…</b></a></div>
-    <a class="btn btn-nav" href="dashboard/" target="_blank" rel="noopener noreferrer">Open app <span aria-hidden="true">↗</span></a></div>
+<a class="brand" href="./"><span class="dot"></span>Mantle Bridge</a>
+<nav class="nav-mid">
+<div class="hasmenu"><span>Bridge guide <svg fill="none" height="12" stroke="currentColor" stroke-width="2.4" viewbox="0 0 24 24" width="12"><path d="M6 9l6 6 6-6"></path></svg></span>
+<div class="menu"><a href="#what">What is this bridge?</a><a href="#how">How bridging works</a><a href="#deposit">Depositing to the destination</a><a href="#withdraw">Withdrawing back</a><a href="#fees">Time and fees</a><a href="#safety">Is it safe?</a><a href="#troubleshoot">Problems and fixes</a></div></div>
+<a href="#how">How it works</a><a href="#fees">Fees</a><a href="#safety">Safety</a><a href="#faq">FAQ</a>
+</nav>
+<div class="nav-r"><div class="sigs"><a class="sig tick" href="https://coinmarketcap.com/currencies/mantle/" rel="noopener noreferrer" target="_blank"><span>MNT</span><b id="sig-mnt">…</b></a><a class="sig tick" href="https://www.coingecko.com/en/coins/ethereum" rel="noopener noreferrer" target="_blank"><span>ETH</span><b id="sig-eth">…</b></a></div>
+<a class="btn btn-nav" href="dashboard/" rel="noopener noreferrer" target="_blank">Open app <span aria-hidden="true">↗</span></a></div>
 </div></header>
-
 <main>
 <section class="hero">
-  <div class="hero-l">
-    <h1>Mantle Bridge</h1>
-    <p class="lead"><strong>Mantle Bridge</strong> moves supported tokens between Ethereum and Mantle Network through canonical contracts — deposits, withdrawals, approvals, and finalization covered here.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="dashboard/" target="_blank" rel="noopener noreferrer">Open the Mantle bridge <span class="go" aria-hidden="true">↗</span></a>
-      <a class="btn btn-ghost" href="#how">How it works</a>
-    </div>
-  </div>
-  <div class="hero-r">
-    <div class="widget">
-      <div class="w-head"><b>Bridge</b><span class="w-tag">Preview</span></div>
-      <div class="leg"><span class="tok"><img src="eth.png" alt="ETH" width="22" height="22"><span>ETH<br><span class="net">Ethereum</span></span></span><span style="text-align:right"><div class="amt">0.0</div><div class="sub">≈ $0</div></span></div>
-      <div class="swapbtn"><i><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4v13M8 4L4 8M8 4l4 4M16 20V7M16 20l-4-4M16 20l4-4"/></svg></i></div>
-      <div class="leg"><span class="tok"><img src="mnt.png" alt="MNT" width="22" height="22"><span>MNT<br><span class="net">Mantle</span></span></span><span style="text-align:right"><div class="amt">0.0</div><div class="sub">≈ $0</div></span></div>
-      <div class="w-route"><span>Route · Ethereum → Mantle</span><b>~2 min</b></div>
-      <a class="w-cta" href="dashboard/" target="_blank" rel="noopener noreferrer">Go to Swap</a>
-      <p class="w-note">Preview only · opens the bridge app in a new tab ↗</p>
-    </div>
-  </div>
-  <a class="scrollcue" href="#numbers" aria-label="Scroll to learn more">
-    <span>Scroll</span>
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M12 19l-6-6M12 19l6-6"/></svg>
-  </a>
+<div class="hero-l">
+<h1>Mantle Bridge</h1>
+<p class="lead"><strong>Mantle Bridge</strong> moves supported tokens between Ethereum and Mantle Network through canonical contracts — deposits, withdrawals, approvals, and finalization covered here.</p>
+<div class="cta-row">
+<a class="btn btn-primary" href="dashboard/" rel="noopener noreferrer" target="_blank">Open the Mantle bridge <span aria-hidden="true" class="go">↗</span></a>
+<a class="btn btn-ghost" href="#how">How it works</a>
+</div>
+</div>
+<div class="hero-r">
+<div class="widget">
+<div class="w-head"><b>Bridge</b><span class="w-tag">Preview</span></div>
+<div class="leg"><span class="tok"><img alt="Ethereum ETH token on Mantle Bridge" height="22" src="eth.png" width="22"/><span>ETH<br/><span class="net">Ethereum</span></span></span><span style="text-align:right"><div class="amt">0.0</div><div class="sub">≈ $0</div></span></div>
+<div class="swapbtn"><i><svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><path d="M8 4v13M8 4L4 8M8 4l4 4M16 20V7M16 20l-4-4M16 20l4-4"></path></svg></i></div>
+<div class="leg"><span class="tok"><img alt="Mantle MNT gas token on Mantle Bridge" height="22" src="mnt.png" width="22"/><span>MNT<br/><span class="net">Mantle</span></span></span><span style="text-align:right"><div class="amt">0.0</div><div class="sub">≈ $0</div></span></div>
+<div class="w-route"><span>Route · Ethereum → Mantle</span><b>~2 min</b></div>
+<a class="w-cta" href="dashboard/" rel="noopener noreferrer" target="_blank">Open Mantle Bridge ↗</a>
+<p class="w-note">Preview only · opens the bridge app in a new tab ↗</p>
+</div>
+</div>
+<a aria-label="Scroll to learn more" class="scrollcue" href="#numbers">
+<span>Scroll</span>
+<svg fill="none" height="16" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24" width="16"><path d="M12 5v14M12 19l-6-6M12 19l6-6"></path></svg>
+</a>
 </section>
-
 <section class="numbers" id="numbers"><div class="wrap">
-  <h2 class="sec-h">Mantle at a glance</h2>
-  <div class="stat-grid"><div class="stat"><div class="stat-n">5000</div><div class="stat-l">Mantle chain&nbsp;ID</div><a class="stat-v" href="https://docs.mantle.xyz/network/for-users/getting-started/what-is-mantle-network" target="_blank" rel="noopener noreferrer">Verify · Mantle docs <span aria-hidden="true">↗</span></a></div><div class="stat"><div class="stat-n"><b id="num-tvl">…</b></div><div class="stat-l">Mantle network TVL</div><a class="stat-v" href="https://defillama.com/chain/Mantle" target="_blank" rel="noopener noreferrer">Verify · DeFiLlama <span aria-hidden="true">↗</span></a></div><div class="stat"><div class="stat-n">~2 min</div><div class="stat-l">Typical deposit (L1&nbsp;→&nbsp;L2)</div><a class="stat-v" href="https://docs.mantle.xyz/network/for-users/how-to-guides/bridge-tokens" target="_blank" rel="noopener noreferrer">Verify · Mantle bridge guide <span aria-hidden="true">↗</span></a></div><div class="stat"><div class="stat-n">≤ ~12h</div><div class="stat-l">Native withdrawal finality</div><a class="stat-v" href="https://docs.mantle.xyz/network/for-users/how-to-guides/bridge-tokens" target="_blank" rel="noopener noreferrer">Verify · Mantle bridge guide <span aria-hidden="true">↗</span></a></div></div>
+<h2 class="sec-h">Mantle at a glance</h2>
+<div class="stat-grid"><div class="stat"><div class="stat-n">5000</div><div class="stat-l">Mantle chain ID</div><a class="stat-v" href="https://docs.mantle.xyz/network/for-users/getting-started/what-is-mantle-network" rel="noopener noreferrer" target="_blank">Verify · Mantle docs <span aria-hidden="true">↗</span></a></div><div class="stat"><div class="stat-n"><b id="num-tvl">…</b></div><div class="stat-l">Mantle network TVL</div><a class="stat-v" href="https://defillama.com/chain/Mantle" rel="noopener noreferrer" target="_blank">Verify · DeFiLlama <span aria-hidden="true">↗</span></a></div><div class="stat"><div class="stat-n">~2 min</div><div class="stat-l">Typical deposit (L1 → L2)</div><a class="stat-v" href="https://docs.mantle.xyz/network/for-users/how-to-guides/bridge-tokens" rel="noopener noreferrer" target="_blank">Verify · Mantle bridge guide <span aria-hidden="true">↗</span></a></div><div class="stat"><div class="stat-n">≤ ~12h</div><div class="stat-l">Native withdrawal finality</div><a class="stat-v" href="https://docs.mantle.xyz/network/for-users/how-to-guides/bridge-tokens" rel="noopener noreferrer" target="_blank">Verify · Mantle bridge guide <span aria-hidden="true">↗</span></a></div></div>
 </div></section>
-
 <section class="content"><div class="wrap">
-  <h2 class="sec-h">Bridging between Ethereum and Mantle</h2>
-  <p class="content-lede lede">Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.</p>
-  <div class="blocks"><article class="block reveal" id="what">
-<h2>What is this bridge?</h2>
+<h2 class="sec-h">Bridging between Ethereum and Mantle</h2>
+<p class="content-lede lede">Mantle Bridge is the canonical route for moving supported tokens between Ethereum and Mantle Network. Deposits, withdrawals, gas, fees, and safety — explained by a practitioner.</p>
+<div class="blocks"><article class="block reveal" id="what">
+<h2>What is Mantlebridge?</h2>
 <div class="prose"><p>Mantle Bridge is the canonical bridge: the route Mantle itself maintains for moving supported tokens between Ethereum and Mantle Network. "Canonical" matters. Instead of a liquidity pool or a third-party relayer, the bridge escrows the source asset in an L1 contract and mints or releases a mapped representation on Mantle — the token you receive is backed by the canonical mapping, not by a market maker's inventory.</p><p>That distinction decides which tokens you can move. Only pairs from Mantle's maintained token list are supported; an arbitrary ERC-20 with no mapping will not bridge. Third-party bridges can fill gaps for unlisted tokens or offer faster exits via liquidity networks, but they introduce their own pool, routing, and counterparty assumptions on top of the <a href="https://ethereum.org/layer-2/learn/">base layer-2 bridging model</a>. For standard ETH and listed ERC-20s, the canonical route is the reference implementation everything else is measured against.</p></div>
 </article>
 <article class="block reveal" id="how">
@@ -248,10 +246,9 @@ footer a{color:var(--acc-ink);text-decoration:none}
 </article>
 </div>
 </div></section>
-
 <section class="faq" id="faq"><div class="wrap">
-  <h2 class="sec-h">Got questions?</h2>
-  <div class="faq-list"><div class="qa reveal"><span class="qn">01</span><div><h3>Is this the official Mantle Bridge site?</h3><div class="prose">No. This is an independent reference dashboard that explains how the bridge works; it does not operate the bridge or hold funds. Always navigate to the official Mantle interface yourself and verify the domain before connecting a wallet.</div></div></div>
+<h2 class="sec-h">Got questions?</h2>
+<div class="faq-list"><div class="qa reveal"><span class="qn">01</span><div><h3>Is this the official Mantle Bridge site?</h3><div class="prose">No. This is an independent reference dashboard that explains how the bridge works; it does not operate the bridge or hold funds. Always navigate to the official Mantle interface yourself and verify the domain before connecting a wallet.</div></div></div>
 <div class="qa reveal"><span class="qn">02</span><div><h3>How long does Mantle Bridge take?</h3><div class="prose">The official FAQ describes deposits (Ethereum → Mantle) as typically about two minutes and withdrawals (Mantle → Ethereum) as up to twelve hours, since withdrawals must prove and finalize through the rollup before an Ethereum claim releases the funds.</div></div></div>
 <div class="qa reveal"><span class="qn">03</span><div><h3>How do I bridge to Mantle Network?</h3><div class="prose">Connect an EVM wallet on Ethereum mainnet, select a token from Mantle's supported list, sign the approval if prompted, then confirm the deposit transaction. The mapped token arrives on Mantle (chain ID 5000) once the cross-domain message is processed.</div></div></div>
 <div class="qa reveal"><span class="qn">04</span><div><h3>Do I need MNT before bridging to Mantle?</h3><div class="prose">Yes, for anything after arrival: MNT pays gas on Mantle, so bridged tokens in an empty wallet are stuck until MNT shows up. You also need ETH on mainnet later to claim any withdrawal back to Ethereum.</div></div></div>
@@ -259,13 +256,9 @@ footer a{color:var(--acc-ink);text-decoration:none}
 <div class="qa reveal"><span class="qn">06</span><div><h3>Should I use the canonical bridge or a third-party bridge?</h3><div class="prose">The canonical route escrows and mints mapped tokens with no provider fee beyond gas, but withdrawals take hours; third-party liquidity bridges can be faster on exits while charging a fee and adding pool and routing risk. For listed tokens with no time pressure, the canonical route is the baseline; for <a href="https://defillama.com/protocol/mantle-bridge">context on bridge usage</a>, public dashboards show how the routes compare.</div></div></div>
 </div>
 </div></section>
-
 <div class="wrap"><section class="disc reveal"><h2>Notes before you use Mantle Bridge</h2><div class="prose"><p><strong>Practitioner note:</strong> the canonical bridge is boring by design, and boring is what you want — escrow in, mapped token out, no market maker in the middle.</p><p>The common mistake is treating a withdrawal like a deposit: people sign on Mantle, see nothing on Ethereum an hour later, and re-send or panic, when the proving window plus a separate L1 claim is simply how the route works.</p><p><strong>Before you sign:</strong></p><ul><li>Confirm you are on the official bridge interface and that the approval targets the known contracts — the L1 Standard Bridge proxy is 0x95fC37A27a2f68e3A647CDc081F0A89bb47c3012, the L2 Standard Bridge is 0x4200000000000000000000000000000000000010.</li><li>Check the source and destination networks in your wallet: Ethereum is chain ID 1, Mantle is 5000, and a wrong-network wallet is behind most "stuck" reports.</li><li>Keep gas on both chains — ETH for the Ethereum side, MNT for the Mantle side — and go in understanding the withdrawal wait is hours, not minutes.</li></ul><p>Contract addresses, chain IDs, and timing figures above were checked against Mantle's official documentation and FAQ, last reviewed 21 July 2026.</p><p>Independent reference — confirm the route in your own wallet.</p></div></section></div>
-
 </main>
-
-<footer><div class="wrap"><strong>Independent</strong> Mantle Bridge information dashboard — not affiliated with any official product. No custody, no financial advice. · <a href="dashboard/" target="_blank" rel="noopener noreferrer">Open app ↗</a> · © 2026</div></footer>
-
+<footer><div class="wrap">Mantle Bridge Guide &amp; Technical Reference · <a href="dashboard/" rel="noopener noreferrer" target="_blank">Open Mantle Bridge App ↗</a> · © 2026</div></footer>
 <script>
 (function(){
   var io=window.IntersectionObserver&&new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});
